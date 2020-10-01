@@ -106,7 +106,7 @@
                 let d = Math.round(parseFloat(faceMatcher.findBestMatch(descriptor).distance) * 100, 2)
                 $("#result").attr("class", "text-success")
                 if (n == "unknown") {
-                    $("#result").attr("class", "text-error")
+                    $("#result").attr("class", "text-danger")
                 }
                 $("#result").text(n + " - " + d.toString() + "%")
                 const drawBox = new faceapi.draw.DrawBox(detection.box,{boxColor: "white"})
@@ -153,6 +153,10 @@
             personname = $("#name").val().trim()
             $("#result").attr("class", "text-primary")
             $("#result").text("Loading")
+            $(this).attr("disabled", true);
+            setTimeout(function(){
+                $("#functionbtn").removeAttr("disabled");
+            },10000)
             snapshot();
 
         })
