@@ -1,0 +1,23 @@
+body{
+    background: url('../img/bg.jpg');
+    background-size: cover;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 50px
+}
+
+video,
+#CursorLayer {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+#result {
+    border-radius: 51px;
+    background: whitesmoke;
+    font-size: 40px;
+}
